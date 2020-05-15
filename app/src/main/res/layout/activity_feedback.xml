@@ -5,14 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
+    android:onClick="rootLayoutTapped"
     tools:context=".FeedbackActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
         android:scaleType="fitEnd"
-        android:src="@drawable/draivs" />
+        android:src="@drawable/draivs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="20dp" />
 
     <RatingBar
         android:id="@+id/rb_rating"
@@ -41,13 +45,13 @@
         app:layout_constraintTop_toBottomOf="@+id/rb_rating" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/et_review"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txt_feedback"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:backgroundTint="#FFF"
         android:hint="Write a review"
         android:textColor="#FFF"
@@ -60,8 +64,12 @@
     <Button
         android:layout_marginTop="20dp"
         android:text="send review"
-        android:layout_width="wrap_content"
+        android:textColor="#FFF"
+        android:background="#757575"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
