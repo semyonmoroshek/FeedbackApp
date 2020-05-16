@@ -54,16 +54,4 @@ public class MainFeedbackActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ReviewActivity.class);
         startActivity(intent);
     }
-
-
-    public void rootLayoutTapped(View view) {
-        try {
-            InputMethodManager inputMethodManager =
-                    (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus()
-                    .getWindowToken(), 0);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
