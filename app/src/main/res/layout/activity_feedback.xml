@@ -62,10 +62,13 @@
         android:layout_marginTop="20dp"
         android:text="Write a review"
         android:textColor="#ffa616"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rb_rating" />
+        app:layout_constraintTop_toBottomOf="@+id/rb_rating"
+        android:focusable="true" />
 
     <Button
         android:id="@+id/btn_send_feedback_main"
